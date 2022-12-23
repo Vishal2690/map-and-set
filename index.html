@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        h1 {
+            color: wheat;
+            background-color: red;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 2px 4px 5px gray;
+        }
+
+        #vvv {
+            color: chocolate;
+        }
+
+        #ccc {
+            color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Map and Set</h1>
+    </center>
+    <pre>01.  "Problem:
+        You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+        Your task is to remove all the duplicate occurrences of characters in the string.
+        
+        Input:
+        abcadeecfb
+        
+        Output:
+        abcdef"</pre>
+    <pre id="vvv">
+        let s="abcadeecfb";
+        let set=new Set();
+        for(let i=0; i<s.length;i++){    
+         set.add(s[i]);
+        }
+            let res="";
+            for(let vr of set){
+                 res+=vr;
+            }
+            console.log(res);
+       </pre>
+    <br>
+    <hr>
+    <pre>02.  "Problem:
+            You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+            
+            Input:
+            abcadeecfb
+            
+            Output:
+            a=2
+            b=2
+            c=2
+            d=1
+            e=2
+            f=1"</pre>
+    <pre id="ccc">
+                let s="abcadeecfb";
+                let map=new Map();
+                for(let i=0; i<s.length;i++){
+                 if(map.has(s[i])){
+                      let value=map.get(s[i]);
+                      map.set(s[i],value+1);
+                         }
+                             else{
+                           map.set(s[i],1);
+                         }
+                            }
+                        for(let [r,v] of map){
+                        console.log(r+"="+v)
+                            }
+            </pre>
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
